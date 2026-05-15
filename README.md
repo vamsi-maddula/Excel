@@ -10,3 +10,4 @@ Once the clean dataset is available, it is used to build pivot-based summaries, 
 The entire workflow is fully automated through Power Query. When the source data is updated, the user can simply refresh the workbook to re-execute all transformation steps and update every connected component including clean data, reports, dashboards, and logs. This design ensures a scalable, efficient, and reliable reporting solution with minimal manual intervention.
 
 
+![Workflow](workflow-diagram.png)
