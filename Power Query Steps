@@ -1,12 +1,30 @@
-Step 1. The raw data is imported into Power Query from an Excel workbook using the Get Data functionality, establishing a connection between the source file and the reporting model.
-Step 2. The first row of the dataset is promoted to headers to ensure all columns are correctly labeled and recognized for transformation.
-Step 3. The data types for each column are standardized by converting Date using Date.From, converting categorical columns such as Region and Product using Text.From, and converting numerical columns such as Sales and Cost using Number.From to ensure accuracy in calculations.
-Step 4. Blank rows are removed from the dataset to eliminate incomplete records that may impact reporting outputs.
-Step 5. Text fields are cleaned and standardized using Text.Trim and Text.Clean to remove extra spaces and non-printable characters, ensuring consistency across all categorical values.
-Step 6. Missing values in the Sales column are identified and handled using the replacement function with the logic if Sales equals null then null else Sales, and such records are flagged and excluded from the final dataset while being tracked separately.
-Step 7. Invalid records are filtered by applying the condition Sales greater than or equal to zero, ensuring that any values where Sales is less than zero are removed from the dataset.
-Step 8. Duplicate records are identified and removed across all columns using the function Table.Distinct applied to the entire dataset to maintain data integrity.
-Step 9. Calculated columns are created to enhance analysis, including Profit calculated using the formula each Sales minus Cost, Month derived using Date.MonthName applied to the Date column, and Year derived using Date.Year applied to the Date column.
-Step 10. The transformed dataset is renamed appropriately and loaded into Excel as a structured output table, which becomes the clean data source for reporting.
-Step 11. All transformation steps are stored within Power Query, enabling automation through which the dataset is refreshed by reapplying all steps when the user executes the refresh command, ensuring the reporting outputs are consistently updated without manual intervention.
-Provide your feedback on BizChat
+Step 1.
+The raw data is imported into Power Query from an Excel workbook using the Get Data functionality, establishing a connection
+betweenthe source file and the reporting model.
+Step 2.
+The first row of the dataset is promoted to headers to ensure all columns are correctly labeled and recognized for transformation.
+Step 3.
+The data types for each column are standardized by converting Date using Date.From, converting categorical columns such as
+Region and Product using Text.From, and converting numerical columns such as Sales and Cost using Number.From to ensure accuracy in calculations.
+Step 4.
+Blank rows are removed from the dataset to eliminate incomplete records that may impact reporting outputs.
+Step 5.
+Text fields are cleaned and standardized using Text.Trim and Text.Clean to remove extra spaces and non-printable characters, ensuring consistency
+across all categorical values.
+Step 6.
+Missing values in the Sales column are identified and handled using the replacement function with the logic if Sales equals 
+null then null else Sales, and such records are flagged and excluded from the final dataset while being tracked separately.
+Step 7.
+Invalid records are filtered by applying the condition Sales greater than or equal to zero, ensuring that any values where Sales is less than zero are
+removed from the dataset.
+Step 8.
+Duplicate records are identified and removed across all columns using the function Table.Distinct applied to the entire dataset to maintain data integrity.
+Step 9.
+Calculated columns are created to enhance analysis, including Profit calculated using the formula each Sales minus Cost, Month derived using Date.MonthName
+applied to the Date column, and Year derived using Date.Year applied to the Date column.
+Step 10.
+The transformed dataset is renamed appropriately and loaded into Excel as a structured output table, which becomes the clean data source for reporting.
+Step 11.
+All transformation steps are stored within Power Query, enabling automation through which the dataset is refreshed by reapplying all steps when the user executes
+the refresh command, ensuring the reporting outputs are consistently updated without manual intervention.
+
